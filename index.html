@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zul iQmal | Portfolio</title>
+  <meta name="description" content="Portfolio of Zul iQmal, a Web Developer, Communicator, and Audio Engineer." />
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+
+  <!-- Background aura (Sinaran~ mentari menyinari~) -->
+  <div class="aura-bg" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+  <div class="cursor-aura" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">RNGQ<span>.</span>Portfolio</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="videos.html">Videos</a>
+      <a href="artworks.html">Artworks</a>
+      <a href="tutorial.html">Tutorial</a>
+      <a href="#contact" class="btn btn-small">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <p class="eyebrow reveal">Hello, I'm</p>
+      <h1 class="reveal">Zul <em>iQmal.</em></h1>
+      <p class="role reveal">I'm a <span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+      <p class="lead reveal">
+        A developer, Communicator, and Audio Engineer. 
+        A man of one too many hobbies.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="assets/documents/Zul_Iqmal_Syah_CV.pdf" class="btn btn-ghost" download>Download CV</a>
+      </div>
+      <div class="socials reveal">
+        <a href="https://github.com/RinggoCh1" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/zuliqmalsyah" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:abangzuliqmalsyah@gmail.com">Email</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="avatar-wrap reveal">
+        <img class="avatar" src="assets/images/me.jpg" alt="Zul iQmal" />
+      </div>
+      <div class="about-text reveal">
+        <h2 class="section-title">About me</h2>
+        <p>
+          I'm an Applied Language Studies student at Universiti Teknologi MARA, specializing in English for Professional Communication, with experience across public relations, audio production, voice performance, and interactive storytelling.
+        </p>
+        <p>
+          I love experimenting and pushing my limits, whether it's in coding, design, or creative projects. I thrive on challenges and enjoy collaborating with others to bring ideas to life. Pressure and deadlines are my motivators, and I always strive to deliver high-quality work.
+        </p>
+        <div class="about-stats">
+          <div class="stat"><strong>7+</strong><span>Years experience</span></div>
+          <div class="stat"><strong>Countless</strong><span>Personal projects</span></div>
+          <div class="stat"><strong>20</strong><span>Eventful Years</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="grid">
+        <article class="card reveal">
+          <h3>Language</h3>
+          <ul class="chips">
+            <li>Academic English</li><li>Malay + Dialects</li><li>Japanese</li><li>Public Speaking</li><li>Voice Acting</li><li>Professional Communication</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h3>Development</h3>
+          <ul class="chips">
+            <li>HTML</li><li>UI/UX Design</li><li>SQL</li><li>REST APIs</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>Python</li><li>Git</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h3>Tools</h3>
+          <ul class="chips">
+            <li>Git</li><li>Figma</li><li>VSC</li><li>Gimp</li><li>Reaper</li><li>OBS Studio</li><li>Obsidian</li><li>Notion</li><li>DaVinci Resolve</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h3>Misc.</h3>
+          <ul class="chips">
+            <li>TTRPG</li><li>Storytelling</li><li>Audio Engineering</li><li>Music Production</li><li>Street Art</li><li>Audiophile</li><li>Gaming</li><li>FGC</li><li>Collaboration</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="app">App</button>
+        <button class="filter" data-filter="design">Design</button>
+      </div>
+
+      <div class="grid projects">
+        <article class="card project reveal" data-category="web">
+          <!-- Replace with: <img class="project-thumb" src="assets/project1.jpg" alt="Project 1" / tapi malas buat sekarang> -->
+          <div class="project-thumb">Project 01</div>
+          <h3>Project One</h3>
+          <p>What it is, what problem it solves, and your role in it.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card project reveal" data-category="app">
+          <div class="project-thumb">Project 02</div>
+          <h3>Project Two</h3>
+          <p>What it is, what problem it solves, and your role in it.</p>
+          <ul class="tags"><li>React</li><li>Node</li></ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card project reveal" data-category="design">
+          <div class="project-thumb">Project 03</div>
+          <h3>Project Three</h3>
+          <p>What it is, what problem it solves, and your role in it.</p>
+          <ul class="tags"><li>Figma</li><li>UI/UX</li></ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Case study</a>
+          </div>
+        </article>
+
+        <article class="card project reveal" data-category="web">
+          <div class="project-thumb">Project 04</div>
+          <h3>Project Four</h3>
+          <p>What it is, what problem it solves, and your role in it.</p>
+          <ul class="tags"><li>JS</li><li>API</li></ul>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">Live</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+      <h2 class="section-title reveal">Experience</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">Oct 2024 – Present</span>
+          <h3>Freelance Music Producer &amp; Audio Editor <small>@ Self-Employed</small></h3>
+          <p>Produce and remix music for campus events and student organisations, and prepare audio for live playback. Also on-site audio engineer, working with digital audio tools to arrange, mix and refine tracks.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">2023 – 2026</span>
+          <h3>Remote English Speaking Tutor <small>@ Freelance</small></h3>
+          <p>Ran English speaking sessions for second-language and foreign-language learners.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">May 2022 – Feb 2025</span>
+          <h3>Voice Over Artist <small>@ Remote</small></h3>
+          <p>Voiced characters for independent creative projects, audio dramas and community productions, adapting delivery, tone and pacing to each script.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Aug 2020 – Present</span>
+          <h3>Game Master <small>@ TTRPG Campaigns</small></h3>
+          <p>Design and run immersive tabletop campaigns across multiple systems, adapting story arcs and world-building to player choices while managing group dynamics and improvising on the fly.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title reveal">Hit Me Up!</h2>
+      <p class="contact-intro reveal">
+        Have a project, a role, or just a question? Send a message or email me at
+        <a href="mailto:abangzuliqmalsyah@gmail.com">abangzuliqmalsyah@gmail.com</a>.
+      </p>
+      <form class="form reveal" id="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p class="form-note" id="form-note" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> RNGQ. Built by hand.</p>
+    <p class="footer-credit">EPC521 Web-Portfolio I</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+  <script src="JS/music.js"></script>
+</body>
+</html>
