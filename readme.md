@@ -49,7 +49,7 @@ EPC521-Portfolio/
 
 ## Viewing the Portfolio
 
-**Live Website:** https://ringgoch1.github.io/RNGQ-Webportfolio/videos.html
+**Live Website:** https://ringgoch1.github.io/RNGQ-Webportfolio/
 
 The website can be accessed through a modern web browser on desktop or mobile devices.
 
