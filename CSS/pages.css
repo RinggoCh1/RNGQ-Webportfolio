@@ -1,0 +1,111 @@
+/* EPC521 page-specific styles. Loaded after CSS/style.css. */
+.page-intro { padding-top: calc(var(--header-h) + 5rem); padding-bottom: 2rem; }
+.page-title { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.05; }
+.page-title em { color: var(--red); font-style: normal; }
+.page-lead { max-width: 62ch; color: var(--muted); margin-top: 1rem; font-size: 1.08rem; }
+.page-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.page-card { padding: clamp(1.2rem, 3vw, 2rem); margin-bottom: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.page-card h2 { margin-bottom: 1rem; }
+.page-card p { color: var(--muted); margin: .5rem 0; }
+.page-card a:not(.btn) { color: var(--red); }
+.resume-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, .9fr); gap: 1.5rem; align-items: start; }
+.resume-entry { padding: 1rem 0; border-top: 1px solid var(--border); }
+.resume-entry h3 { margin: .35rem 0; }
+.detail-list { padding-left: 1.2rem; list-style: disc; color: var(--muted); }
+.detail-list li { margin: .45rem 0; overflow-wrap: anywhere; }
+.small-note { color: var(--muted); font-size: .85rem; margin-top: 1rem; }
+.media-feature { margin-bottom: 2rem; }
+.media-heading { display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-bottom: 1rem; }
+.media-label { color: var(--red); font-size: .8rem; border: 1px solid var(--border); border-radius: 99px; padding: .35rem .7rem; }
+.portfolio-video { display: block; width: 100%; max-height: 560px; aspect-ratio: 16 / 9; background: #000; border-radius: 12px; margin: 1rem 0; }
+iframe.portfolio-video { border: 0; } /* YouTube embeds */
+.project-meta { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; color: var(--muted); font-size: .85rem; margin-top: 1rem; }
+.artwork-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.artwork-card { margin: 0; }
+.artwork-preview { display: block; width: 100%; height: auto; max-height: 560px; object-fit: contain; background: rgba(0,0,0,.25); border-radius: 10px; margin: 1rem 0; }
+.text-link { display: inline-block; margin-top: .8rem; }
+.tutorial-layout { max-width: 900px; }
+.tutorial-steps { padding-left: 1.4rem; }
+.tutorial-steps li { padding: 1rem 0 1.5rem; border-top: 1px solid var(--border); }
+.tutorial-steps h3 { margin-bottom: .75rem; }
+.screenshot-placeholder { min-height: 150px; display: grid; place-items: center; padding: 1rem; margin: .8rem 0; border: 1px dashed rgba(255,255,255,.25); border-radius: 10px; color: var(--muted); text-align: center; background: rgba(255,255,255,.02); }
+.footer-credit { opacity: .7; font-size: .8rem; margin-top: .35rem; }
+@media (max-width: 800px) {
+  .resume-layout { grid-template-columns: 1fr; }
+  .media-heading { flex-direction: column; }
+}
+
+/* ==========================================================
+   E-RESUME INTERACTIVITY
+   ========================================================== */
+
+/* Keyboard focus */
+a:focus-visible, button:focus-visible, summary:focus-visible, video:focus-visible {
+  outline: 2px solid var(--red); outline-offset: 3px; border-radius: 6px;
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Hero with photo */
+.resume-hero { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+.resume-photo .avatar { width: 240px; height: 240px; }
+
+/* Expandable experience entries */
+.exp-entry summary {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  cursor: pointer; list-style: none;
+}
+.exp-entry summary::-webkit-details-marker { display: none; }
+.exp-entry summary::after {
+  content: "+"; flex: none; width: 1.8rem; height: 1.8rem; display: grid; place-items: center;
+  border: 1px solid var(--border); border-radius: 50%;
+  color: var(--red); font-size: 1.2rem; line-height: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+.exp-entry[open] summary::after { content: "–"; }
+.exp-entry summary:hover::after { border-color: var(--red); background: rgba(255, 31, 61, 0.12); }
+.entry-head { flex: 1; }
+.exp-entry .detail-list { margin-top: 0.6rem; }
+.entry-tags { margin-top: 0.9rem; }
+.entry-tags li { font-size: 0.75rem; padding: 0.2rem 0.7rem; transition: background 0.2s, border-color 0.2s; }
+.entry-tags li.on { background: rgba(255, 31, 61, 0.3); border-color: var(--red); }
+
+/* Skill highlighting */
+.exp-entry { transition: opacity 0.25s, border-color 0.25s; }
+.exp-entry.is-match { border-top-color: var(--red); }
+.exp-entry.is-dim { opacity: 0.35; }
+.exp-entry.is-dim:hover, .exp-entry.is-dim:focus-within { opacity: 0.8; }
+
+.exp-toolbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.skill-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; flex: 1 1 320px; }
+.toolbar-label { color: var(--muted); font-size: 0.8rem; margin-right: 0.3rem; }
+.skill-chip {
+  cursor: pointer; padding: 0.3rem 0.9rem; border-radius: 999px;
+  font: 500 0.8rem var(--font); color: var(--muted);
+  background: transparent; border: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.skill-chip:hover { color: var(--text); border-color: var(--red); }
+.skill-chip.active { color: var(--text); background: rgba(255, 31, 61, 0.15); border-color: var(--red); }
+.skill-status { min-height: 1.4em; margin: 0 0 0.5rem; }
+
+/* Copy buttons and references */
+.copy-btn {
+  cursor: pointer; margin-left: 0.4rem; padding: 0.1rem 0.7rem; min-width: 4.6rem;
+  border-radius: 999px; border: 1px solid var(--border); background: transparent;
+  color: var(--muted); font: 500 0.75rem var(--font);
+  transition: color 0.2s, border-color 0.2s;
+}
+.copy-btn:hover { color: var(--text); border-color: var(--red); }
+.copy-btn.copied { color: var(--red); border-color: var(--red); }
+.reference + .reference { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.page-card .ref-name { color: var(--text); font-weight: 600; }
+
+@media (max-width: 800px) {
+  .resume-hero { grid-template-columns: 1fr; gap: 1.5rem; }
+  .resume-photo { order: -1; }
+  .resume-photo .avatar { width: 150px; height: 150px; }
+}
