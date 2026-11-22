@@ -31,11 +31,19 @@ EPC521-Portfolio/
 ├── artworks.html
 ├── tutorial.html
 ├── CSS/
+├   ├── pages.css
+├   └── style.css
 ├── JS/
+├   ├── music.js
+├   └── script.js
 └── assets/
     ├── audio/
+    ├   └── bg-music.m4a
     ├── documents/
+    ├   └── Zul_Iqmal_Syah_CV.pdf
     ├── images/
+    ├   ├── Headshot.png
+    ├   └── me.jpg
     └── videos/
 ```
 
