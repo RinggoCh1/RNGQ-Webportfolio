@@ -109,3 +109,53 @@ a:focus-visible, button:focus-visible, summary:focus-visible, video:focus-visibl
   .resume-photo { order: -1; }
   .resume-photo .avatar { width: 150px; height: 150px; }
 }
+
+/* ==========================================================
+   COLLAPSIBLE CARDS (e.g. Academic Qualifications)
+   Separate from .exp-entry so the experience toggles/filters ignore them.
+   ========================================================== */
+.collapse-card > summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  cursor: pointer; list-style: none;
+}
+.collapse-card > summary::-webkit-details-marker { display: none; }
+.collapse-card > summary::after {
+  content: "+"; flex: none; width: 1.8rem; height: 1.8rem; display: grid; place-items: center;
+  border: 1px solid var(--border); border-radius: 50%;
+  color: var(--red); font-size: 1.2rem; line-height: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+.collapse-card[open] > summary::after { content: "–"; }
+.collapse-card > summary:hover::after { border-color: var(--red); background: rgba(255, 31, 61, 0.12); }
+.collapse-card > summary .section-title { margin-bottom: 0; }
+.collapse-card[open] > summary { margin-bottom: 1rem; }
+
+/* ==========================================================
+   TUTORIAL SCREENSHOTS
+   ========================================================== */
+.tutorial-shot { margin: 0.8rem 0; }
+.tutorial-shot img {
+  display: block; max-width: 100%; height: auto; max-height: 560px; object-fit: contain;
+  border: 1px solid var(--border); border-radius: 10px; background: rgba(0, 0, 0, 0.25);
+}
+.tutorial-shot figcaption { color: var(--muted); font-size: 0.8rem; margin-top: 0.5rem; }
+.shot-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: start; margin: 0.8rem 0; }
+.shot-pair .tutorial-shot { margin: 0; }
+.shot-pair .tutorial-shot img { max-height: 420px; }
+
+
+/* ==========================================================
+   ABOUT PAGE
+   ========================================================== */
+.statement {
+  font-size: clamp(2.4rem, 7vw, 5.2rem); line-height: 1.08; font-weight: 800;
+  max-width: 18ch; text-wrap: balance;
+}
+.statement em {
+  font-style: normal; color: var(--red);
+  text-shadow: 0 0 30px var(--red-glow), 0 0 80px var(--red-glow);
+}
+.about-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, .9fr); gap: 1.5rem; align-items: start; padding-top: 2rem; }
+@media (max-width: 800px) {
+  .about-layout { grid-template-columns: 1fr; }
+}
