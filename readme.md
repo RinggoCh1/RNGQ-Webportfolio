@@ -36,31 +36,45 @@ The portfolio brings together several aspects of my work and creative practice:
 ## Project Structure
 
 ```text
-EPC521-Portfolio/
+RNGQ-Webportfolio/
 ├── index.html
-├── resume.html
-├── videos.html
-├── artworks.html
-├── tutorial.html
 ├── about.html
+├── artworks.html
+├── resume.html
+├── tutorial.html
+├── videos.html
+├── readme.md
+│
+├── assets/
+│   ├── audio/
+│   │   └── bg-music.m4a
+│   │
+│   ├── documents/
+│   │   └── Zul\_Iqmal\_Syah\_CV.pdf
+│   │
+│   └── images/
+│       ├── collage.png
+│       ├── cover.png
+│       ├── Headshot.png
+│       ├── me.jpg
+│       ├── poster.png
+│       ├── screenshot 1.png
+│       ├── screenshot 2.png
+│       ├── screenshot 3.png
+│       ├── screenshot 4a.png
+│       ├── screenshot 4b.png
+│       ├── screenshot 5a.png
+│       ├── screenshot 5b.png
+│       └── screenshot 6.png
+│
 ├── CSS/
 │   ├── pages.css
 │   └── style.css
-├── JS/
-│   ├── music.js
-│   └── script.js
-└── assets/
-    ├── audio/
-    │   └── bg-music.m4a
-    ├── documents/
-    │   └── Zul_Iqmal_Syah_CV.pdf
-    ├── images/
-    │   ├── collage.png
-    │   ├── cover.png
-    │   ├── Headshot.png
-    │   ├── me.jpg
-    │   └── screenshot 1.png … screenshot 6.png   (tutorial steps, incl. 4a/4b and 5a/5b)
-    └── videos/
+│
+└── JS/
+    ├── music.js
+    └── script.js
+
 ```
 
 ## Viewing the Portfolio
