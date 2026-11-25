@@ -85,7 +85,7 @@ The website can be accessed through a modern web browser on desktop or mobile de
 
 ## Author
 
-**Zul Iqmal**
+**Zul Iqmal Syah Bin Abang**
 
 Universiti Teknologi MARA (UiTM)  
 EPC521 — Web-Enabled Multimedia E-Language Production
